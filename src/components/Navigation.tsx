@@ -59,7 +59,7 @@ export default function Navigation() {
         onMouseLeave={() => setActiveItem(null)}
         >
           <a href={item.href}>{item.label}</a>
-          <ChevronDown className={`size-3 ${activeItem === item.href ? 'rotate-180 text-blue-600 translate-y-1 duration-300' : ''}  text-grey-600`} />
+          <ChevronDown className={`size-3 ${activeItem === item.href ? 'text-blue-600 translate-y-1 duration-300' : ''}  text-grey-600`} />
         </li>
       ))}
       </ul>
