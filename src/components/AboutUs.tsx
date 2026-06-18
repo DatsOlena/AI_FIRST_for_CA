@@ -25,86 +25,69 @@ const competencies = [
   },
 ] as const
 
-const sectionGradientStyle = {
-  background: `
-    radial-gradient(
-      ellipse 70% 60% at 50% 50%,
-      rgba(26, 115, 232, 0.12) 0%,
-      rgba(10, 15, 30, 0) 70%
-    ),
-    #0A0F1E
-  `,
-} as const
-
 export default function AboutUs() {
   return (
-    <section
-      id="o-nas"
-      className="relative overflow-hidden px-6 py-16 text-white lg:py-24"
-      style={sectionGradientStyle}
-    >
-      <div className="relative z-10 mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2 lg:gap-16">
-        {/* Left column */}
+    <section id="o-nas" className="bg-[#0A0F1E] px-6 py-14 lg:py-18">
+      <div className="mx-auto grid max-w-7xl items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/45">
+            O nas
+          </p>
 
-          <h2 className="font-bricolage text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold leading-tight tracking-[-0.5px] text-white">
+          <h2 className="font-bricolage text-3xl font-extrabold leading-tight text-white lg:text-[2.25rem]">
             Doradztwo i technologia. Razem, od początku.
           </h2>
 
-          <p className="mt-6 text-[18px] leading-relaxed text-white/80">
+          <p className="mt-6 text-lg leading-[1.65] text-white/75">
             AI First to część rodziny MGM Consulting — firmy z wieloletnim
             doświadczeniem w doradztwie biznesowym, cyfryzacji i wdrożeniach
             technologicznych dla firm usługowych i produkcyjnych w Polsce i
             Wielkiej Brytanii.
           </p>
 
-          <p className="mt-4 text-base leading-relaxed text-white/60">
+          <p className="mt-5 text-[15px] leading-[1.7] text-white/55">
             Wychodzimy od konsultingu: zanim cokolwiek zautomatyzujemy,
             rozumiemy Twój biznes. Mapujemy procesy, identyfikujemy wąskie
             gardła i liczymy realny zwrot. Dopiero wtedy dobieramy technologię
             — nie na odwrót.
           </p>
 
-          <p className="mt-4 text-base leading-relaxed text-white/60">
+          <p className="mt-4 text-[15px] leading-[1.7] text-white/55">
             Przez lata doradzaliśmy firmom przy inwestycjach, cyfryzacji i
             rozwoju operacyjnym. Wdrożenia AI to naturalne rozwinięcie tej samej
             pracy: pomagamy firmom rosnąć skuteczniej, bez proporcjonalnego
             wzrostu kosztów.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-8 border-y border-white/10 py-8">
+          <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-10">
             {stats.map(({ value, label }) => (
               <div key={label}>
-                <p className="font-bricolage text-2xl font-extrabold text-brand-highlight lg:text-3xl">
+                <dt className="font-bricolage text-2xl font-bold text-white lg:text-[1.75rem]">
                   {value}
-                </p>
-                <p className="mt-1 max-w-[140px] text-sm text-white/50">
+                </dt>
+                <dd className="mt-1.5 text-[13px] leading-snug text-white/45">
                   {label}
-                </p>
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
 
           <a
             href="/o-nas"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-blue px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(26,115,232,0.45)] transition-[transform,box-shadow,background] hover:-translate-y-0.5 hover:bg-brand-highlight hover:shadow-[0_8px_28px_rgba(107,184,255,0.55)]"
+            className="mt-10 inline-flex items-center gap-2 rounded-md bg-[#1A73E8] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#1558b8]"
           >
             Porozmawiaj z naszym doradcą
             <ArrowRight className="size-4" aria-hidden />
           </a>
         </div>
 
-        {/* Right column — 2×2 competency grid */}
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
           {competencies.map(({ title, text }) => (
-            <article
-              key={title}
-              className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm transition-[border-color,background,transform] hover:-translate-y-0.5 hover:border-brand-highlight/30 hover:bg-white/[0.06]"
-            >
-              <h3 className="mb-2 text-base font-semibold text-white">
+            <article key={title} className="bg-[#0A0F1E] p-6 lg:p-7">
+              <h3 className="mb-3 text-[15px] font-semibold leading-snug text-white">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/55">{text}</p>
+              <p className="text-[14px] leading-[1.65] text-white/50">{text}</p>
             </article>
           ))}
         </div>
