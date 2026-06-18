@@ -59,10 +59,10 @@ const painPoints = [
 
 export default function PainPoints() {
   return (
-    <section className="bg-white px-6 py-16 lg:py-24">
+    <section className="bg-[#EEF2FF] px-6 py-10 lg:py-14">
       <div className="mx-auto max-w-7xl">
         <header className="mx-auto mb-12 max-w-3xl text-center lg:mb-16">
-          <p className="mb-4 inline-flex items-center rounded-full border border-brand-blue/30 bg-brand-blue/10 px-4 py-1.5 text-sm font-medium text-brand-blue">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-gray-500">
             Czy to brzmi znajomo?
           </p>
 
@@ -77,7 +77,7 @@ export default function PainPoints() {
           </p>
         </header>
 
-        <div className="overflow-hidden rounded-[20px] border border-[#E5E7EB]">
+        <div className="overflow-hidden rounded-[20px] border border-[#E5E7EB] bg-white shadow-sm">
           <div className="grid grid-cols-1 divide-y divide-[#E5E7EB] md:grid-cols-2 md:divide-x md:divide-y lg:grid-cols-3">
             {painPoints.map((painPoint) => (
               <Card

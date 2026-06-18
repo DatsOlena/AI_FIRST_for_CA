@@ -16,7 +16,7 @@ export default function Card({
   isNew = false,
 }: CardProps) {
   return (
-    <article className="group relative flex gap-4 bg-white p-6 transition-[transform,background-color,box-shadow] hover:z-10 hover:-translate-y-1 hover:bg-gray-50/80 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] sm:gap-5 sm:p-8">
+    <article className="group relative bg-white p-6 transition-colors hover:bg-gray-50/80 sm:p-8">
       <span
         className="absolute top-4 left-4 flex size-7 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white sm:top-5 sm:left-5"
         style={{ backgroundColor: accentColor }}
@@ -26,15 +26,12 @@ export default function Card({
       </span>
 
       {isNew && (
-        <span
-          className="absolute top-4 right-4 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white sm:top-5 sm:right-5"
-          style={{ backgroundColor: accentColor }}
-        >
+        <span className="absolute top-4 right-4 rounded-full border border-[#1A73E8]/30 bg-[#EEF2FF] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#1A73E8] sm:top-5 sm:right-5">
           New
         </span>
       )}
 
-      <div className="mt-8 grid w-full grid-cols-[88px_1fr] gap-4 items-start gap-4 sm:mt-9 sm:grid-cols-[104px_1fr] sm:gap-5">
+      <div className="mt-8 grid w-full grid-cols-[88px_1fr] items-start gap-4 sm:mt-9 sm:grid-cols-[104px_1fr] sm:gap-5">
         <div className="overflow-visible">
           <img
             src={icon}

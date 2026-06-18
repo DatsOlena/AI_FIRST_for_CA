@@ -27,7 +27,7 @@ const competencies = [
 
 export default function AboutUs() {
   return (
-    <section id="o-nas" className="bg-[#0A0F1E] px-6 py-14 lg:py-18">
+    <section id="o-nas" className="bg-[#0A0F1E] px-6 py-10 lg:py-14">
       <div className="mx-auto grid max-w-7xl items-start gap-14 lg:grid-cols-2 lg:gap-20">
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-white/45">
