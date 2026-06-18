@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import PainPoints from './components/PainPoints'
 import AboutUs from './components/AboutUs'
 import FounderVideo from './components/FounderVideo'
+import Services from './components/Services'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <PainPoints />
       <AboutUs />
       <FounderVideo />
+      <Services />
     </>
   )
 }
