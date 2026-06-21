@@ -4,6 +4,7 @@ import PainPoints from './components/PainPoints'
 import AboutUs from './components/AboutUs'
 import FounderVideo from './components/FounderVideo'
 import Services from './components/Services'
+import CaseStudies from './components/CaseStudies'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AboutUs />
       <FounderVideo />
       <Services />
+      <CaseStudies />
     </>
   )
 }
